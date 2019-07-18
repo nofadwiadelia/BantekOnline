@@ -9,10 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FormFileUpload"/>
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".BantekForm" />
-        <activity android:name=".MenuActivity" />
+        <activity android:name=".MenuActivity"/>
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +18,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".BantekForm"
+            android:label=""
+            android:parentActivityName=".MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".FormFileUpload"
+            android:label=""
+            android:parentActivityName=".BantekForm">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BantekForm" />
+        </activity>
+
     </application>
 
 </manifest>

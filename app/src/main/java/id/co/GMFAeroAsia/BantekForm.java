@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import java.util.Calendar;
 
@@ -86,6 +88,12 @@ public class BantekForm extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
+
+
+        Toolbar ToolBarAtas1 = (Toolbar)findViewById(R.id.toolbar_satu);
+        setSupportActionBar(ToolBarAtas1);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 }
