@@ -80,7 +80,7 @@
                     android:padding="15dp"
                     android:background="@drawable/shapeinput"
                     android:drawablePadding="10dp"
-                    android:hint="Email"/>
+                    android:hint="User ID"/>
 
                 <EditText
                     android:layout_width="match_parent"

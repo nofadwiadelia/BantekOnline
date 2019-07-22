@@ -19,6 +19,7 @@ public class BantekForm extends AppCompatActivity {
 
     private Button submitform ;
     EditText date1, date2;
+    TextView tvSelect1;
     DatePickerDialog datePickerDialog;
 
     @Override
@@ -26,11 +27,19 @@ public class BantekForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bantek_form);
 
+        tvSelect1 = findViewById(R.id.TextViewSelect1);
         submitform = findViewById(R.id.submitform);
         date1 = (EditText) findViewById(R.id.date1);
         date2 = (EditText) findViewById(R.id.date2);
         date1.setInputType(InputType.TYPE_NULL);
         date2.setInputType(InputType.TYPE_NULL);
+
+        tvSelect1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BantekForm.this, RecyclerViewActivity.class));
+            }
+        });
 
         submitform.setOnClickListener(new View.OnClickListener() {
             @Override
